@@ -1,0 +1,40 @@
+# Name of the GitHub Actions workflow.
+name: Java CI with Gradle
+
+# Controls when the workflow will run.
+on:
+  # Triggers the workflow on push or pull request events for the "main" branch.
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run in parallel.
+jobs:
+  # This workflow contains a single job called "build".
+  build:
+    # The type of virtual machine that the job will run on.
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job.
+    steps:
+      # Step 1: Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Sets up a Java JDK on the runner.
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # Step 3: Grant execute permission to the Gradle wrapper script.
+      # This is necessary for the runner to be able to execute it.
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      # Step 4: Run the 'build' task with Gradle.
+      # This command will automatically compile the code, run the tests, and build the application.
+      - name: Build and test with Gradle
+        run: ./gradlew build
