@@ -1,0 +1,10 @@
+[2025-08-12T10:00:00] [INFO] - Application starting up...
+[2025-08-12T10:00:05] [INFO] - Connecting to database server at 192.168.1.1.
+[2025-08-12T10:00:06] [DEBUG] - Sending authentication request.
+[2025-08-12T10:00:08] [ERROR] - Authentication failed for user 'guest'.
+This is an invalid line and should be ignored.
+[2025-08-12T10:00:15] [WARN] - Connection pool is reaching its limit.
+[2025-08-12T10:00:20] [INFO] - User 'admin' successfully logged in.
+[2025-08-12T10:00:21] [FATAL] - This is an unknown log level.
+[2025-08-12T10:00:25] [INFO] - Shutting down application.
+[invalid-timestamp] [INFO] - This timestamp is malformed.

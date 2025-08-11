@@ -1,0 +1,5 @@
+[2025-08-12T11:00:00] [INFO] - API Service is starting.
+[2025-08-12T11:00:02] [DEBUG] - Registering endpoint /users.
+[2025-08-12T11:00:03] [DEBUG] - Registering endpoint /orders.
+[2025-08-12T11:00:05] [WARN] - API key is missing for a request from 10.0.0.5.
+[2025-08-12T11:00:10] [INFO] - Request to /users completed successfully.
