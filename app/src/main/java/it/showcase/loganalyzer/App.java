@@ -26,6 +26,8 @@ public class App {
         // Use a fixed-size thread pool. A good starting point is the number of
         // available processors.
         int coreCount = Runtime.getRuntime().availableProcessors();
+        System.out.println("Using " + coreCount + " threads for concurrent processing.");
+        
         ExecutorService executorService = Executors.newFixedThreadPool(coreCount);
 
         // This list will hold the results of our concurrent tasks.
